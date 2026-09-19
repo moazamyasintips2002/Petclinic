@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      http://apache.org
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -49,7 +49,8 @@ public class PetclinicInitializer extends AbstractDispatcherServletInitializer {
      * You also may use the -Dspring.profiles.active=jdbc VM options to change
      * default jpa Spring profile.
      */
-    private static final String SPRING_PROFILE = "jpa";
+    // CHANGED: Switched default profile from "jpa" (MySQL required) to "hsqldb" (In-Memory Database)
+    private static final String SPRING_PROFILE = "hsqldb";
 
     @Override
     protected WebApplicationContext createRootApplicationContext() {
